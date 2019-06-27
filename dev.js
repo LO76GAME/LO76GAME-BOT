@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 
-client.login("NTkwODgwMjQwNjU0MzUyNDA1.XQo2iQ.motvmES6WohRed9p79jKPyZOZrM")
+client.login("")
 
 var prefix = (".");
 
