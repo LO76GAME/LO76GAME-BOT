@@ -1,3 +1,3 @@
-this bot is currently unavaible in ENGLISH  -  UNITED KINDOM .
+this bot is currently unavaible in ENGLISH  -  UNITED KINDOM . ❌
 
 hour : GTM
