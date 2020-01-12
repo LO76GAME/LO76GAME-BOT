@@ -1,4 +1,4 @@
-# LO76GAME-BOT
+# -LO76BOT-
 
 discord bot FR
 
