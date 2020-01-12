@@ -2,7 +2,7 @@
 
 this bot ain't available in ENGLISH - THE UNITED STATES OF AMERICA - ❌ yet
 
-hour : GTM - 5 NY / GTM -6 TX  / GTM -7 UT / GTM -8 NV *
+hour : UTC - 5 NY / UTC -6 TX  / UTC -7 UT / UTC -8 NV *
 
 __if you're not american you probably need some help below__ :
 
