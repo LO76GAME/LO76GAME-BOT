@@ -4,5 +4,11 @@ hour : GTM - 5 NY / GTM -6 TX  / GTM -7 UT / GTM -8 NV *
 
 __if you're not american you probably need some help below__ :
 
-NY = New York *state* // TX = Texas // UT = Utah // NV = Nevada.
+NY = New York *state* // TX = Texas // UT = Utah // NV = Nevada. 
 working on `us_states.js` to help foreign . it will be like : `;search state NJ` and bot will reply `NJ mean New Jersey, it's 10:26a .`
+
+# UPDATE /!\
+
+to use the bot in english the prefix will be `;;` so `;;ban` will use thisq command in english u.s.
+
+Ain't available yet.
