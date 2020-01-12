@@ -14,4 +14,4 @@ working on U.S. version.
 
 more in `languages/en us.md`
 
-releasd date : 19/01/2020
+release date : 19/01/2020
