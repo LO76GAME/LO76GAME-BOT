@@ -7,7 +7,7 @@ hour : UTC - 5 NY / UTC -6 TX  / UTC -7 UT / UTC -8 NV *
 __if you're not american you probably need some help below__ :
 
 NY = New York *state* // TX = Texas // UT = Utah // NV = Nevada. 
-working on `us_states.js` to help foreign . it will be like : `;search state NJ` and bot will reply `NJ mean New Jersey, it's 10:26a .`
+
 
 # LAST UPDATE /!\
 
