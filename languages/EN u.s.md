@@ -11,7 +11,7 @@ working on `us_states.js` to help foreign . it will be like : `;search state NJ`
 
 # LAST UPDATE /!\
 
-to use the bot in english the prefix will be `;;` *instead of `;`* so `;;ban` will use this command in english u.s.
+to use the bot in english, the prefix will be `;;` *instead of `;`* so `;;ban` will use this command in english u.s.
 
 Ain't available yet.
 # OLD UPDATE
