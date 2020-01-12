@@ -11,3 +11,5 @@ Avaible in `1` langue : `French`
 # ANNOUNCEMENT :
 
 working on U.S. version.
+
+more in language/en us.md
