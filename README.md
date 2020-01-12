@@ -12,4 +12,4 @@ Avaible in `1` langue : `French`
 
 working on U.S. version.
 
-more in language/en us.md
+more in `language/en us.md`
