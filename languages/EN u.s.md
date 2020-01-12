@@ -1,3 +1,5 @@
+# ENGLISH U.S.
+
 this bot ain't available in ENGLISH - THE UNITED STATES OF AMERICA - ❌ yet
 
 hour : GTM - 5 NY / GTM -6 TX  / GTM -7 UT / GTM -8 NV *
