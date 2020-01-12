@@ -12,4 +12,6 @@ Avaible in `1` langue : `French`
 
 working on U.S. version.
 
-more in `language/en us.md`
+more in `languages/en us.md`
+
+releasd date : 19/01/2020
