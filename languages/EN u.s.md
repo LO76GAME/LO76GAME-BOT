@@ -9,8 +9,9 @@ __if you're not american you probably need some help below__ :
 NY = New York *state* // TX = Texas // UT = Utah // NV = Nevada. 
 working on `us_states.js` to help foreign . it will be like : `;search state NJ` and bot will reply `NJ mean New Jersey, it's 10:26a .`
 
-# UPDATE /!\
+# LAST UPDATE /!\
 
 to use the bot in english the prefix will be `;;` *instead of `;`* so `;;ban` will use this command in english u.s.
 
 Ain't available yet.
+# OLD UPDATE
