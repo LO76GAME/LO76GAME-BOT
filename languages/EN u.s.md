@@ -9,6 +9,6 @@ working on `us_states.js` to help foreign . it will be like : `;search state NJ`
 
 # UPDATE /!\
 
-to use the bot in english the prefix will be `;;` so `;;ban` will use thisq command in english u.s.
+to use the bot in english the prefix will be `;;` so `;;ban` will use this command in english u.s.
 
 Ain't available yet.
