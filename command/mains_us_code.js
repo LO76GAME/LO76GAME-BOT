@@ -52,7 +52,7 @@ bot.on("message", (message) => {
           if(message.content.startsWith( prefix + "setup")){
             if(!message.guild) return message.channel.send(dmDenied)
             
-            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: Tu n'as pas la force en toi pour faire cette commande `BAN_MEMBERS`")
+            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: you need  `BAN_MEMBERS` to use this command ")
            
             message.guild.createChannel("lo76bot-log", 'text').then(channel => {
               channel.setTopic("LOG LO76BOT ")
@@ -64,7 +64,7 @@ bot.on("message", (message) => {
           }
   
           if(message.content === prefix + "del"){
-            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: Tu n'as pas la force en toi pour faire cette commande `BAN_MEMBERS`")
+            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: you need  `BAN_MEMBERS` to use this command ")
             if(!message.guild) return message.channel.send(dmDenied)
             message.react('✅').then(() => message.react('❌'));
   
@@ -84,22 +84,22 @@ bot.on("message", (message) => {
           }
       })
       .catch(collected => {
-          message.reply(':x: Délai expiré ');
+          message.reply('Expirated delay ');
       });
           }
   
           if(message.content === prefix + "infos-serv") {
             var server_embed = new Discord.RichEmbed()
             .setColor("#40A497")
-            .setTitle("Informations sur le serveur discord !")
-            .addField("Nom du serveur :", `${message.guild.name}`)
-            .addField("Créé le :", `${message.guild.createdAt}`)
-            .addField("Tu as rejoint le :", `${message.member.joinedAt}`)
-            .addField("Nombre de membres :", `${message.guild.memberCount}`)
-            .addField("Nombre de catégories et de salons :", `${message.guild.channels.size}`)
-            .setFooter("Infos - serveur")
+            .setTitle("About this server discord ^^")
+            .addField("Server name :", `${message.guild.name}`)
+            .addField("Created at :", `${message.guild.createdAt}`)
+            .addField("Joined at :", `${message.member.joinedAt}`)
+            .addField("Members count:", `${message.guild.memberCount}`)
+            .addField("Category and chanels count :", `${message.guild.channels.size}`)
+            .setFooter("About server")
             message.channel.send(server_embed)
-            console.log("Commande infos - serveur!")
+            console.log("about server command")
             message.react('🆗')
           }
   
@@ -111,13 +111,13 @@ bot.on("message", (message) => {
           if (message.content.startsWith(prefix + "sond")) {
             message.delete();
   
-            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: Tu n'as pas la force en toi pour faire cette commande `BAN_MEMBERS`")
+            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: you must have `BAN_MEMBERS`")
   
            // if(message.guild)return message.channel.send(dmDenied)
             
             var args = message.content.split(' ').join(' ').slice(5);
           
-            if(!args) return message.channel.send("Tu dois poser une question !")
+            if(!args) return message.channel.send("You need to ask something to the others!")
           
             var sond_embed = new Discord.RichEmbed()
             .setColor('RANDOM')
@@ -129,100 +129,10 @@ bot.on("message", (message) => {
             message.channel.send(sond_embed).then(function(message){
               message.react("✅")
                 message.react("❌")
-                console.log("Un admin veut l'avis des membres !")
+                console.log("one adminstrator wants members view")
             })
           }
-  
-          //sond rob1
-  
-          if (message.content.startsWith(prefix + "rob1-sond-2")) {
-            message.channel.send(":x: Nope, cette commande n'est utilisable que sur demande, veuillez contactez @Lo76GAME#7667 : __merci d'utiliser ;sond__")
-          }
-          if (message.content.startsWith(prefix + "rob1-sond-3")) {
-            message.delete();
-  
-            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: Tu n'as pas la force en toi pour faire cette commande `BAN_MEMBERS`")
-  
-           // if(message.guild)return message.channel.send(dmDenied)
-            
-            var args = message.content.split(' ').join(' ').slice(12);
-          
-            if(!args) return message.channel.send("Tu dois poser une question !")
-          
-            var sond_embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setTitle("Sondage, veuillez ne répondre qu'une seule fois !")
-            .setDescription(`Sondage de : ${message.author.username}`)
-            .addField("** **",`${args}`)
-            //.setThumbnail("https://cdn.discordapp.com/attachments/482179956743602197/486860823055302657/Sondage4.png")
-            .setTimestamp()
-            message.channel.send(sond_embed).then(function(message){
-              message.react("1️⃣")
-                message.react("2️⃣")
-                  message.react("3️⃣")
-                
-            })
-          }
-  
-          if (message.content.startsWith(prefix + "rob1-sond-4")) {
-            message.delete();
-  
-            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: Tu n'as pas la force en toi pour faire cette commande `BAN_MEMBERS`")
-  
-           // if(message.guild)return message.channel.send(dmDenied)
-            
-            var args = message.content.split(' ').join(' ').slice(12);
-          
-            if(!args) return message.channel.send("Tu dois poser une question !")
-          
-            var sond_embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setTitle("Sondage, veuillez ne répondre qu'une seule fois !")
-            .setDescription(`Sondage de : ${message.author.username}`)
-            .addField("** **",`${args}`)
-            //.setThumbnail("https://cdn.discordapp.com/attachments/482179956743602197/486860823055302657/Sondage4.png")
-            .setTimestamp()
-            message.channel.send(sond_embed).then(function(message){
-              message.react("1️⃣")
-                message.react("2️⃣")
-                  message.react("3️⃣")
-                    message.react("4️⃣")
-                
-            })
-          }
-  
-          if (message.content.startsWith(prefix + "rob1-sond-5")) {
-            message.delete();
-  
-            if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: Tu n'as pas la force en toi pour faire cette commande `BAN_MEMBERS`")
-  
-           // if(message.guild)return message.channel.send(dmDenied)
-            
-            var args = message.content.split(' ').join(' ').slice(12);
-          
-            if(!args) return message.channel.send("Tu dois poser une question !")
-          
-            var sond_embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setTitle("Sondage, veuillez ne répondre qu'une seule fois !")
-            .setDescription(`Sondage de : ${message.author.username}`)
-            .addField("** **",`${args}`)
-            //.setThumbnail("https://cdn.discordapp.com/attachments/482179956743602197/486860823055302657/Sondage4.png")
-            .setTimestamp()
-            message.channel.send(sond_embed).then(function(message){
-              message.react("1️⃣")
-                message.react("2️⃣")
-                  message.react("3️⃣")
-                    message.react("4️⃣")
-                      message.react("5️⃣")
-                
-            })
-          }
-  
-          if(message.content === prefix + "eval"){
-            if(message.author.id !== ownerID) return
-            message.reply("```\n if(message.content.startsWith(prefix + checkid)){\n if(message.content === prefix + testperm){\nif(message.content === prefix + checkserver){\nif(message.content.startsWith(prefix + checkServerId)){\n```")
-          }
+
   
   
           if (message.content === "XD"){
