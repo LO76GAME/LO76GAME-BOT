@@ -67,7 +67,7 @@ bot.on("message", (message) => {
             if(!message.member.hasPermission("BAN_MEMBERS"))return message.reply(":x: you need  `BAN_MEMBERS` to use this command ")
             if(!message.guild) return message.channel.send(dmDenied)
             message.react('✅').then(() => message.react('❌'));
-  
+   
   const filter = (reaction, user) => {
       return ['✅', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
   };
