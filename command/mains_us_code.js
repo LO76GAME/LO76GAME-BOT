@@ -215,7 +215,7 @@ bot.on("message", (message) => {
   
   
   
-          if(message.content.startsWith(prefix + "ban")){
+          if(message.content.startsWith( us_prefix + "ban")){
               if (!message.guild) return message.channel.send(dmDenied);
               if(victime=== message.author) return message.reply("❌ You can't ban yourself bryan ;-;")
               message.delete();
@@ -260,12 +260,12 @@ bot.on("message", (message) => {
   
           }
   
-            if(message.content === prefix + "check"){
+            if(message.content === us_prefix + "check"){
               if (!message.guild) return message.channel.send(dmDenied);
               var modchannel = message.guild.channels.find(`name`, "lo76bot-log");
   
               var modchannelMissing = new Discord.RichEmbed()
-              .setTitle("Check Catégorie Modération ")
+              .setTitle("Moderation settings ")
               .addField("`MODERATION CHANNEL`", ":x: No `lo76bot-log`channel has been found ;-; ... ")
               .setTimestamp()
               .setColor("#ff0000")
