@@ -1,3 +1,5 @@
+//in progress
+
 const Discord = require('discord.js')
 //var command = require('discord.js-commando')
 const ms = require('ms')
