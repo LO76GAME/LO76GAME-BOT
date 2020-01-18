@@ -6,7 +6,7 @@ const ms = require('ms')
 var bot = new Discord.Client();
 const fs = require ("fs");
 //var warns = JSON.parse(fs.readFileSync("./warns.json", "utf8"));
-var token = " -- -- -- "
+var token = "  "
 bot.login(token) 
 
 var prefix = (";");
@@ -810,7 +810,7 @@ bot.on("message", (message) => {
         if(message.author.id !== ownerID)return;
        var annce = bot.channels.find(`name`,"lo76bot-log")
       }
-  
+    }
   }); 
   //if(message.content === prefix + "@"){
   //    message.channel.send("@everyone").then(m => m.delete(20))
