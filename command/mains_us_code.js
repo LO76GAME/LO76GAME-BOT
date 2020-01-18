@@ -273,14 +273,14 @@ bot.on("message", (message) => {
               .setColor("#ff0000")
   
               var adminperMissing = new Discord.RichEmbed()
-              .setTitle("Check Catégorie Modération ")
+              .setTitle("Moderation settings ")
               .addField("`SALON MODÉRATION`", "✅`lo76bot-log` ")
               .addField("BOT PERMISSIONS", ":x: this bot don't have any admin perm !")
               .setTimestamp()
               .setColor("#ff0000")
   
               var msgepermauthorMissing = new Discord.RichEmbed()
-              .setTitle("Check Catégorie Modération ")
+              .setTitle("Moderation settings ")
               .addField("`SALON MODÉRATION`", " ✅Salon `lo76bot-log` est bien paramétré ")
               .addField("BOT PERMISSIONS", "✅this bot have a admin perm !")
               .addField("BECARFUL", "you don't have moderation permissions ")
@@ -294,7 +294,7 @@ bot.on("message", (message) => {
   
               message.channel.send(`${message.author}`)
               var checkEmbed = new Discord.RichEmbed()
-              .setTitle("Check Catégorie Modération ")
+              .setTitle("Moderation settings ")
               .addField("`BOT SETTINGS`", "✅all is alright ")
               .setTimestamp()
               .setColor("#00ff0d")
@@ -303,33 +303,32 @@ bot.on("message", (message) => {
               
           }
   
-          if(message.content.startsWith(prefix + "kick")){
+          if(message.content.startsWith( us_prefix + "kick")){
               if (!message.guild) return message.channel.send(dmDenied);
               message.delete();
               var Banchannel = message.guild.channels.find(`name`, "lo76bot-log");
   
               var victimek = message.guild.member(message.mentions.users.first())
               var LeMessagek = message.content.slice (5) //1 minimum
-              if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.channel.send(`${message.author}`+ "tu ne peux pas effectuer cette commande. Perimmission `BAN_MEMBERS` requis.❌ ");
+              if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.channel.send(`${message.author}`+ "you cannot use ;;kick, tu need `BAN_MEMBERS`❌ ");
               if (!victimek) return message.reply(" :no_entry:\nje ne trouve pas ce membre. ")
               
-              if(victimek === message.author) return message.reply("❌Tu ne peux pas t'auto bannir ;-;")
-              if (victimek.hasPermission("BAN_MEMBERS")) return message.reply("❌ **:no_entry: je ne peux pas le bannir.** " + `${message.author}`);
-              if(!Banchannel) return message.reply(";-; Il manque le salon `lo76bot-log`. Je ne peux pas utiliser les fonctions `MODÉRATIONS`...")
+              if(victimek === message.author) return message.reply("❌ U can't ban yoursel mate ;-;")
+              if (victimek.hasPermission("BAN_MEMBERS")) return message.reply("❌ **:no_entry: I can't ban him.** " + `${message.author}`);
+              if(!Banchannel) return message.reply(";-;  `lo76bot-log`is require to use `MODÉRATIONS`topics")
            
               var KickEmbed = new Discord.RichEmbed()
               .setTitle("KICK")
               .setThumbnail(victimek.user.displayAvatarURL)
               .addBlankField(true)
-              .addField("Kick par ", `${message.author}`)
-              .addField("Raison de l'expulsion", LeMessagek)
-              .addField("Kick dans le channel suivant", `<#${message.channel.id}>`)
+              .addField("Kick by ", `${message.author}`)
+              .addField("Reason", LeMessagek)
+              .addField("Kick in", `<#${message.channel.id}>`)
               .setFooter(message.author.username, message.author.avatarURL)
               .setColor("#db9812")
               .setTimestamp()
               Banchannel.send(KickEmbed);
-  
-              message.channel.send("✅Kick demandé ! . . . ").then(m => m.delete(500));
+               
   
               //victimek.createDM().then(channelk => {
               //    channelk.send("Vous avez été banni par "+ `${message.author}` + "pour le motif suivant" + LeMessagek)
@@ -351,38 +350,25 @@ bot.on("message", (message) => {
           
           }
   
-          if(message.content === prefix){
+          if(message.content === us_prefix){
   
               if (!message.guild) return message.channel.send(dmDenied);
-              message.channel.send("❌ Merci de préciser une commande")
+              message.channel.send("❌ input a valid argument after `;;`")
           }
   
-          if(message.content === prefix + "invit"){
+          if(message.content === us_prefix + "invit"){
               //if (!message.guild) return message.channel.send(dmDenied);
-              message.channel.send("> `inviter le bot/contact:`https://lo76game-yt-84.webself.net/bot-discord-v1  ")
+              message.channel.send("> `invit bot/web help:`https://lo76game-yt-84.webself.net/bot-discord-v1  ")
               message.react('❤')
           }
-  
-          if(message.content === prefix + "bvn"){
+      
+          if(message.content === us_prefix + "bug"){
   
               if (!message.guild) return message.channel.send(dmDenied);
-              message.channel.send("> **BIENVENUE :heart:**")
+             message.channel.send("ain't available in english yet, working on it.")
           }
       
-          if(message.content === prefix + "bug"){
-  
-              if (!message.guild) return message.channel.send(dmDenied);
-              var bugEmbed = new Discord.RichEmbed()
-              .setTitle("BUG")
-              .addField("Dernier Bug enregistrer", "main server was disconected due to a security issue into it.")
-              .addField("Date"," 09/01/2020")
-              .addField("Contexte","SYSTEM ERROR (01)")
-              .setTimestamp()
-              .setColor(botColor)
-              message.channel.send(bugEmbed);
-          }
-      
-          if(message.content === prefix +"help"){
+          if(message.content === us_prefix +"help"){
   
             var dateuh = new Date().toUTCString();
   
@@ -391,7 +377,7 @@ bot.on("message", (message) => {
   
               var helpembedconfirm = new Discord.RichEmbed()
               .setTitle("HELP COMMAND")
-              .addField(";help", "Enovoyé en messages privés !")
+              .addField(";;help", "Check your dm's !")
               .setColor(botColor)
               message.channel.send(helpembedconfirm).then(function(message){
                 message.react("✅").then(message.delete(5000))
@@ -481,10 +467,10 @@ bot.on("message", (message) => {
   
       //stop warn
   
-          if(message.content.startsWith(prefix + "mppp-all")) {
+          if(message.content.startsWith(us_prefix + "mp-all")) {
   
               if (!message.guild) return message.channel.send(dmDenied);
-       
+              if(!message.author.id !== ownerID ) return
               var args = message.content.split(" ").slice(1);
               var msge = args.join(' ');
       
@@ -496,8 +482,8 @@ bot.on("message", (message) => {
               .setDescription("`⚠`")
               .setThumbnail(bot.user.avatarURL)
               .addBlankField(true)
-              .addField("MESSAGE IMPORTANT ⚠", msge)
-              .addField("Envoyé par :", `${message.author}`)
+              .addField("IMPORTANT ⚠", msge)
+              .addField("Sent by :", `${message.author}`)
               //.addField()
               .setFooter(bot.user.username, bot.user.avatarURL)
               .setTimestamp()
@@ -505,10 +491,10 @@ bot.on("message", (message) => {
               message.delete()
               message.guild.members.map(m => m.send(mpall))
               
-              message.channel.send("✅message envoyé !").then(m => m.delete(5000));
+              message.channel.send("✅ sent!").then(m => m.delete(5000));
           }
       //stop Mpall
-          if(message.content.startsWith(prefix + "help")) {
+          if(message.content.startsWith(us_prefix + "help")) {
   
               if (!message.guild) return message.channel.send(dmDenied);
       
@@ -518,14 +504,14 @@ bot.on("message", (message) => {
               .setDescription("`Le préfix est ;`"+ version)
               .setThumbnail(bot.user.avatarURL)
               .addBlankField(true)
-              .addField("`Commandes Pratiques`  ", "`ping`, `bvn`, `check`,`report` permet de signaler un bug/proposer une idée, `color-help`, `setup` Pour paramétrer automatiquement le bot,`infos-serv`")
+              .addField("`Fun`", "`ping`, `check`,`report`, `color-help`, `setup`,`infos-serv`")
               .addBlankField(true)
-              .addField("`Modération` *demande la perm Ban_Members!* + Un salon `lo76bot-log`:", "`warn`,`seewarn`,`kick`, `ban`,`localmute`,`unmute`, `clear <Nombre de messages>`,`say`, `create` <channel name>,`del` pour suprimmer le channel actuelle,`sond` pour faire un sondage !  ")
+              .addField("`Moderation`" , "`warn`,`seewarn`,`kick`, `ban`,`localmute`,`unmute`, `clear <Nombre de messages>`,`say`, `create` <channel name>,`del` pour suprimmer le channel actuelle,`sond` pour faire un sondage !  ")
               .addBlankField(true)
-              .addField("`Concernant le bot:`", "`update`, `bug`, `bot-info` Le bot DOIT avoir la perm `ADMINISTRATOR` pour bien fonctionner")
+              .addField("`About the bot`", "`update`, `bug`, `bot-info`")
               .addBlankField(true)
-              .addField("`inviter le bot/contact:`","https://lo76game-yt-84.webself.net/bot-discord-v1")
-              .addField("`INFOS` ","Créer par LO76GAME -LO76BOT- 2019")
+              .addField("`invit link:`","https://lo76game-yt-84.webself.net/bot-discord-v1")
+              .addField("`ABOUT` ","By  LO76GAME -LO76BOT- 2019-2020")
               .setFooter(bot.user.username, bot.user.avatarURL)
               .setTimestamp()
               .setColor(botColor)
