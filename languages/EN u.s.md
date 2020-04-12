@@ -1,3 +1,5 @@
+⚠Due to the Covid pandemic, this english version is unavailable 
+
 # ENGLISH U.S.
 
 this bot's available in ENGLISH - THE UNITED STATES OF AMERICA - ✅
