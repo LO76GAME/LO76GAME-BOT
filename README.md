@@ -2,7 +2,7 @@
 
 discord bot FR&EN u.s.
 
-V 1.2
+V 1.3
 
 - - - - - - - - - - - - -
 this bot is programmed in JS with Discord.js .
