@@ -1,6 +1,6 @@
 # - LO76BOT -
 
-discord bot FR&EN u.s.
+discord bot FR
 
 V 1.3.2
 
