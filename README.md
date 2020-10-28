@@ -1,4 +1,4 @@
-# -LO76BOT-
+# - LO76BOT -
 
 discord bot FR&EN u.s.
 
